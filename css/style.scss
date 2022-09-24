@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+@media screen and (max-width: 400px) {
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #2D0F42 16.4%, #09133C 100%);
+    padding: 0 15px;
+    color: #fff;
+}
+
+.main-page {
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: none;
+}
+
+.header {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__logo {
+        text-decoration: none;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .header__menu {
+        display: none;
+    }
+    .header__burger {
+        position: relative;
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 3px;
+            background: white;
+            top: calc(50% - 1.5px);
+            right: 0;
+        }
+    }
+}
+
+.offer {
+    margin-top: 70px;
+    .offer__text {
+        font-size: 20px;
+        font-weight: 700;
+        text-shadow: 5px -2px 35px rgba(255, 255, 255, 0.63);
+        max-width: 70%;
+    }
+    .offer__subtext {
+        margin-top: 30px;
+        color: rgba(255, 255, 255, 0.8);
+        font-style: italic;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .offer__buttons {
+        margin-top: 80px;
+        width: 50%;
+
+        .offer__button {
+            background: #06408C;
+            box-shadow: 3px 4px 9px rgba(0, 0, 0, 0.59);
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .offer__github-link {
+           position: relative; 
+           display: flex;
+           align-items: center;
+           width: 130px;
+           height: 35px;
+           background: #fff;
+           border-radius: 34px;
+           margin-top: 20px;
+           color: #000;
+           font-size: 10px;
+           font-style: italic;
+           font-weight: 400;
+           text-decoration: none;
+           padding-left: 40px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                background-image: url('../img/github.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 90%;
+                height: 90%;
+                left: 2.5%;
+                top: 5%;
+
+            }
+        }
+    }
+}
+
+.offer-cards {
+    position: relative;
+    margin: 60px auto 0;
+    .offer-card {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        width: 150px;
+        height: 60px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 33px 1px rgba(0, 0, 0, 0.5);
+        .offer-card__img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        .offer-card__text {
+            max-width: 100px;
+            max-height: 36px;
+            color: #000;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+    }
+    .offer-card:nth-child(1) {
+        right: 0;
+        top: 0;
+        z-index: 3;
+    }
+    .offer-card:nth-child(2) {
+        top: 48px;
+        left: calc(50% - 80px);
+        z-index: 2;
+
+    }
+    .offer-card:nth-child(3) {
+        top: 96px;
+    }
+}
+
+.skills {
+    position: relative;
+    .container {
+        .python-image {
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 200px;
+            background-image: url('../img/python_empty.svg');
+            opacity: 20%;
+            right: 0;
+            top: 50px;
+        }
+        .skills__header {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .skills__cards {
+            .skills-card {
+                width: 200px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                background: #fff;
+                border-radius: 30px;
+                margin-bottom: 20px;
+                .skills-card__img {
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 15px;
+                }
+                .skills-card__img:nth-child(2) {
+                    width: 30px;
+                    height: 40px;
+                }
+                .skills-card__text {
+                    color: #000;
+                    margin-left: 10px;
+                    font-weight: 500;
+                    font-size: 10px;
+                    max-width: 115px;
+                }
+            }
+        }
+        .skills-info {
+            .skills-info__card {
+                margin-bottom: 5px;
+                .card__button {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    background-color: transparent;
+                    border: none;
+                    color: #fff;
+                    margin-bottom: 10px;
+
+                    span {
+                        margin-left: 15px;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                }
+                .card__button::before {
+                    position: absolute;
+                    background-image: url('../img/plus.svg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    top: 2px;
+                    left: 0;
+                }
+            }
+            .card__description {
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 20px;
+                padding: 20px;
+                .card__description_text {
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+                .card__description_text:nth-child(2) {
+                    margin-top: 10px;
+                }
+                .card__description_text:nth-child(3) {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.about-me {
+    position: relative;
+    padding-bottom: 70px;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 200px;
+        height: 130px;
+        background-image: url(../img/HTML\ vector-mob.svg);
+        top: -60px;
+        right: 30px;
+    }
+    .container {
+        .about-me__header {
+            margin-top: 70px;
+            margin-bottom: 30px;
+        }
+        .about-me-wrapper {
+            .about-me-offer {
+                .about-me__card {
+                    background: rgba(0, 0, 0, 0.3);
+                    border-radius: 20px;
+                    padding: 20px 50px 20px 20px;
+                    .card__text {
+                        font-weight: 300;
+                        font-size: 12px;
+                    }
+                }
+                .telegram-link {
+                    position: relative;
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 140px;
+                    height: 35px;
+                    background: #391140;
+                    border-radius: 34px;
+                    font-weight: 700;
+                    font-size: 10px;
+                    color: #fff;
+                    padding-left: 30px;
+
+                }
+                .telegram-link::before {
+                    position: absolute;
+                    content: '';
+                    width: 35px;
+                    height: 35px;
+                    background-image: url(../img/telegram.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .about-me__image {
+                display: none;
+            }
+        }
+        
+    }
+}
+
+.footer {
+    display: none;
+}
+
+}
+
+
+@media screen and (min-width: 1140px) {
+    body {
+        font-family: 'Montserrat', sans-serif;
+        .main-page {
+            height: 100vh;
+            background-image: url("../img/main-img.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .container {
+                position: relative;
+                .header {
+                    padding-top: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .header__logo {
+                        font-size: 50px;
+                        font-weight: 700;
+                        text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.25);
+                        color: black;
+                        text-decoration: none;
+                    }
+                    .header__menu {
+                        position: relative;
+                        z-index: 2;
+                        &:after {
+                            position: absolute;
+                            left: -200px;
+                            top: -100px;
+                            content: '';
+                            width: 1100px;
+                            height: 220px;
+                            z-index: -1;
+                            border-radius: 100%;
+                            filter: blur(100px);                       
+                            background: #D9D9D9;
+                        }
+                        .header__menu_link {
+                            text-decoration: none;
+                            font-size: 30px;
+                            color:black;
+                            font-weight: 600;
+                            font-style: italic;
+                            margin-left: 70px;
+                            z-index: 2;
+                            &:hover {
+                                color: #fff;
+                                transition: .2s ease-in;
+                                text-shadow: 1px 1px 1px #000;
+                            }
+                        }
+                    }
+                }
+
+                .offer {
+                    .offer__text {
+                        font-weight: 700;
+                        font-size: 50px;
+                        color: #fff;
+                        text-shadow: 5px 7px 35px rgba(255, 255, 255, 0.63);
+                        margin-left: 60%;
+                        margin-top: 250px;
+                    }
+                    .offer__subtext {
+                        font-weight: 500;
+                        font-size: 30px;
+                        font-style: italic;
+                        color: rgba(255, 255, 255, 0.8);
+                        margin-top: 120px;
+                        margin-left: 60%;
+                        position: relative;
+                        z-index: 1;
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            height: 50px;
+                            width: 400px;
+                            top: 0;
+                            left: 0;
+                            background: #566188;
+                            z-index: -1;
+                            filter: blur(80px);
+                        }
+                    }
+                    .offer__buttons {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 120px;
+                        .offer__button {
+                            display: inline-block;
+                            font-size: 30px;
+                            text-decoration: none;
+                            font-style: italic;
+                            color: #fff;
+                            padding: 15px 30px;
+                            background: #06408C;
+                            margin-left: 60%;
+                            border-radius: 10px;
+                            transition: .3s ease-in-out;
+                            &:hover {
+                                background-color: #041F42;
+                                box-shadow: 0px 0px 20px white;
+                            }
+                        }
+                        .offer__github-link {
+                            margin-left: 80px;
+                            display: inline-block;
+                            width: 169px;
+                            height: 41px;
+                            padding-left: 30px;
+                            background: #fff;
+                            border-radius: 31px;
+                            text-decoration: none;
+                            color: #000;
+                            font-style: italic;
+                            font-size: 15px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            filter: drop-shadow(5px 4px 14px #000000);
+                            z-index: 2;
+                            transition: .3s ease-in-out;
+                            &::before {
+                                z-index: 3;
+                                position: absolute;
+                                left: 3px;
+                                width: 36px;
+                                height: 36px;
+                                content: '';
+                                background-image: url('../img/github.svg');
+                                background-size: cover;
+                            }
+                            &:hover {
+                                background-color: #AC699A;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .offer-cards {
+                    display: flex;
+                    position: absolute;
+                    left: 0;
+                    bottom: -50px;
+                    .offer-card {
+                        display: flex;
+                        align-items: center;
+                        background: #fff;
+                        box-shadow: 0px 0px 33px 1px rgba(0, 0, 0, 0.5);
+                        width: 220px;
+                        height: 100px;
+                        border-radius: 30px;
+                        margin-left: 50px;
+
+                        .offer-card__img {
+                            margin-left: 10px;
+                        }
+                        .offer-card__text {
+                            margin-left: 5px;
+                            display: inline-block;
+                            color: #fff;
+                            max-width: 150px;
+                            font-size: 15px;
+                            color: #000;
+                            
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        max-width: 1180px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .content {
+        background: linear-gradient(180deg, #2D0F42 16.4%, #09133C 100%);
+    }
+
+    // Секция скиллов.
+
+    .skills {
+        .container {
+            position: relative;
+            .html_image {
+                &::after {
+                    background-image: url("../img/html_empty.svg");
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    content: '';
+                    width: 390px;
+                    height: 280px;
+                    top: 350px;
+                    right: 150px;
+                }
+                &::before {
+                    background: #75083C;
+                    position: absolute;
+                    filter: blur(100px);
+                    transform: rotate(15deg);
+                    content: '';
+                    width: 200px;
+                    height: 200px;
+                    top: 370px;
+                    right: 230px;
+                }
+            }
+            .skills__header {
+                padding-top: 130px;
+                font-weight: 700;
+                color: #fff;
+                font-size: 60px;
+
+            }
+            .skills__cards {
+                margin-top: 100px;
+                .skills-card {
+                    display: flex;
+                    align-items: center;
+                    width: 350px;
+                    height: 150px;
+                    background: #fff;
+                    border-radius: 30px;
+                    margin-bottom: 40px;
+                    .skills-card__img {
+                        margin-left: 5px;
+                        width: 100px;
+                        height: 100px;
+                    }
+                    .skills-card__text {
+                        font-size: 20px;
+                        margin-left: 10px;
+                        min-width: 200px;
+                    }
+                }
+            }
+            &::after {
+                background-image: url("../img/python_empty.svg");
+                background-repeat: no-repeat;
+                position: absolute;
+                content: '';
+                width: 200px;
+                height: 200px;
+                top: 150px;
+                right: -50px;
+                opacity: 60%;
+            }
+            &::before {
+                background: #75083C;
+                position: absolute;
+                filter: blur(100px);
+                transform: rotate(15deg);
+                content: '';
+                width: 200px;
+                height: 200px;
+                top: 150px;
+                right: -50px;
+            }
+
+            .skills-info {
+                margin-top: 80px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .skills-info__card {
+                    width: 50%;
+                    margin-bottom: 80px;
+                    .card__button {
+                        position: relative;
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                        color: #fff;
+                        font-size: 30px;
+                        vertical-align: middle;
+                        font-weight: 300;
+                        span {
+                            padding-left: 40px;
+                        }
+                        &::before {
+                            background-image: url('../img/plus.svg');
+                            width: 30px;
+                            height: 30px;
+                            content: '';
+                            position: absolute;
+
+                        }
+                    }
+                    .card__description {
+                        margin-top: 20px;
+                        padding: 40px 50px;
+                        background: rgba(0, 0, 0, 0.3);
+                        width: 500px;                   
+                        border-radius: 30px;
+                        .card__description_text {
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                        .card__text-margin {
+                            margin-bottom: 30px;
+                        }
+                    }
+                        .hidden {
+                            display: none;
+                        }
+            
+                }
+            }
+        }
+    }
+
+    .about-me {
+        padding-bottom: 100px;
+        margin-top: 50px;
+        .container {
+            .about-me__header {
+                font-weight: 700;
+                font-size: 60px;
+                color: #fff;
+
+            }
+            .about-me-wrapper {
+                display: flex;
+                justify-content: space-between;
+                .about-me-offer {
+                    .about-me__card {
+                        margin-top: 30px;
+                        width: 500px;
+                        border-radius: 30px;
+                        padding: 30px;
+                        background: rgba(0, 0, 0, 0.3);
+                        .card__text {
+                            font-weight: 300;
+                            font-size: 20px;
+                            color: #fff;
+                        }
+                    }
+                    .telegram-link {
+                        position: relative;
+                        display: flex;
+                        width: 260px;
+                        height: 68px;
+                        background: #391140;
+                        padding: 15px 30px;
+                        border-radius: 34px;
+                        color: white;
+                        text-decoration: none;
+                        font-size: 20px;
+                        justify-content: center;
+                        align-items: center;
+                        padding-left: 80px;
+                        margin-top: 70px;
+                        transition: .3s ease-in-out;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 68px;
+                            height: 68px;
+                            background-image: url('../img/telegram.svg');
+                            top: 0;
+                            left: 0;
+
+                        }
+                        &:hover {
+                            background-color: #fff;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+    .footer {
+        background: #0D133D;
+        box-shadow: 0px -19px 13px rgba(0, 0, 0, 0.25);
+        padding-top: 25px;
+        padding-bottom: 25px;
+        .container {
+
+            .footer__header {
+                color: #000;
+                text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.25);
+                font-weight: 700;
+                font-size: 40px;
+                margin-bottom: 35px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 850px;
+                    margin-left: 50px;
+                    height: 4px;
+                    background-color: #000;
+                    top: 50%;
+                }
+            }
+            .footer__contacts {
+                display: flex;
+                justify-content: space-between;
+                .contacts__info {
+                    .footer__text {
+                        font-size: 20px;
+                        color: rgba(179, 179, 179, 0.8);
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+                    .footer__link {
+                        display: block;
+                        text-decoration: none;
+                        &:hover {
+                            color: #E4E5E5;
+                            transition: .2s ease-in;
+                            text-shadow: #75083C 1px 0 10px;
+                            animation:  5s infinite alternate ease-in;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
